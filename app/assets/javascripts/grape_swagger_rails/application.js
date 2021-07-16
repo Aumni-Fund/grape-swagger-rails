@@ -1,4 +1,4 @@
-//= require ./jquery-1.12.4.min
+//= require ./jquery-1.8.0.min
 //= require ./jquery.slideto.min
 //= require ./jquery.wiggle.min
 //= require ./jquery.ba-bbq.min
