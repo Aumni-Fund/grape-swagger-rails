@@ -2,7 +2,7 @@
 //= require ./jquery.slideto.min
 //= require ./jquery.wiggle.min
 //= require ./jquery.ba-bbq.min
-//= require ./handlebars-4.7.7
+//= require ./handlebars-2.0.0
 //= require ./marked
 //= require ./lodash.min
 //= require ./backbone-min
