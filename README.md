@@ -1,10 +1,28 @@
 # GrapeSwaggerRails
 
 [![Gem Version](https://badge.fury.io/rb/grape-swagger-rails.svg)](http://badge.fury.io/rb/grape-swagger-rails)
-[![Build Status](https://travis-ci.org/ruby-grape/grape-swagger-rails.svg)](https://travis-ci.org/ruby-grape/grape-swagger-rails)
+[![Tests](https://github.com/ruby-grape/grape-swagger-rails/actions/workflows/test.yml/badge.svg)](https://github.com/ruby-grape/grape-swagger-rails/actions/workflows/test.yml)
 [![Code Climate](https://codeclimate.com/github/ruby-grape/grape-swagger-rails/badges/gpa.svg)](https://codeclimate.com/github/ruby-grape/grape-swagger-rails)
 
 Swagger UI as Rails Engine for grape-swagger gem.
+
+# Table of Contents
+
+- [Installation](#installation)
+- [Compatibility](#compatibility)
+- [Usage](#usage)
+  - [Basic Authentication](#basic-authentication)
+  - [Pre-fill Authentication](#pre-fill-authentication)
+  - [API Token Authentication](#api-token-authentication)
+  - [Swagger UI Authorization](#swagger-ui-authorization)
+    - [Integration with DoorKeeper](#integration-with-doorkeeper)
+  - [Hiding the API or Authorization text boxes](#hiding-the-api-or-authorization-text-boxes)
+  - [Updating Swagger UI from Dist](#updating-swagger-ui-from-dist)
+  - [Enabling in a Rails-API Project](#enabling-in-a-rails-api-project)
+  - [Enabling in Rails 6 (Sprokets 5)](#enabling-in-rails-6-sprokets-5)
+- [Contributors](#contributors)
+- [Contributing](#contributing)
+- [License](#license)
 
 ## Installation
 
@@ -31,6 +49,8 @@ grape  | grape-swagger
 0.9.0  | 0.8.0
 0.10.0 | 0.9.0
 0.16.2 | 0.20.2
+1.8.0  | 1.6.1
+2.2.0  | 2.1.1
 
 ## Usage
 
@@ -140,9 +160,10 @@ by specify:
 GrapeSwaggerRails.options.api_auth = 'token'
 GrapeSwaggerRails.options.api_key_name = 'Authorization'
 GrapeSwaggerRails.options.api_key_type = 'header'
+GrapeSwaggerRails.options.api_key_placeholder = 'authorization_token'
 ```
 
-You can use the ```api_key``` input box to fill in your API token.
+You can use the ```authorization_token``` input box to fill in your API token.
 ### Swagger UI Authorization
 
 You may want to authenticate users before displaying the Swagger UI, particularly when the API is protected by Basic Authentication.
